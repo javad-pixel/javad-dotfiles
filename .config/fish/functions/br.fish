@@ -1,0 +1,1 @@
+/home/javad/.local/share/broot/launcher/fish/br.fish
