@@ -1,7 +1,3 @@
--- The xmonad configuration of Derek Taylor (DistroTube)
--- http://www.youtube.com/c/DistroTube
--- http://www.gitlab.com/dwt1/
-
 ------------------------------------------------------------------------
 ---IMPORTS
 ------------------------------------------------------------------------
@@ -79,9 +75,9 @@ windowCount     = gets $ Just . show . length . W.integrate' . W.stack . W.works
 
 main = do
     -- Launching three instances of xmobar on their monitors.
-    xmproc0 <- spawnPipe "xmobar -x 0 /home/javad/.config/xmobar/xmobarrc0"
-    xmproc1 <- spawnPipe "xmobar -x 1 /home/javad/.config/xmobar/xmobarrc2"
-    xmproc2 <- spawnPipe "xmobar -x 2 /home/javad/.config/xmobar/xmobarrc1"
+    xmproc0 <- spawnPipe "xmobar -x 0 /home/javad/.config/xmobar/xmobarrc"
+    xmproc1 <- spawnPipe "xmobar -x 1 /home/javad/.config/xmobar/xmobarrc"
+    xmproc2 <- spawnPipe "xmobar -x 2 /home/javad/.config/xmobar/xmobarrc"
     -- the xmonad, ya know...what the WM is named after!
     xmonad $ ewmh desktopConfig
         { manageHook = ( isFullscreen --> doFullFloat ) <+> myManageHook <+> manageHook desktopConfig <+> manageDocks

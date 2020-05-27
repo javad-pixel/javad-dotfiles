@@ -1,8 +1,6 @@
 set --export SHELL /usr/bin/fish
 set --export EDITOR "nvim"
 set --export export NNN_OPENER=rifle
-set --export ls exa
-set --export la exa -la
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 function reconnect
 	bluetoothctl -- disconnect
@@ -13,3 +11,7 @@ function reconnect
 	bluetoothctl -- connect 00:18:09:8D:CD:DD
 end
 set -e fish_greeting
+export JAVA_HOME=/usr/lib/jvm/java-13-openjdk/
+
+set -gx PATH $JAVA_HOME/bin $PATH
+
