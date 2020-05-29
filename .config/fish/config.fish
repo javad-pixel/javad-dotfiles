@@ -11,7 +11,7 @@ function reconnect
 	bluetoothctl -- connect 00:18:09:8D:CD:DD
 end
 set -e fish_greeting
-export JAVA_HOME=/usr/lib/jvm/java-13-openjdk/
+export JAVA_HOME=/usr/lib/jvm/java-14-openjdk/
 
 set -gx PATH $JAVA_HOME/bin $PATH
 
